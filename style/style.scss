@@ -1,0 +1,136 @@
+
+* {
+  font-family: 'Italiana', serif;
+}
+
+.wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #645340;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding: 0;
+  font-size: 30px;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#newPoster {
+width: 400px;
+height: 20px;
+padding: 6px 12px;
+font-size: 14px;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+#newsynopsis {
+  width: 400px;
+}
+#submitListing {
+  &:hover {
+    background-color: maroon;
+    color: white;
+  }
+}
+
+#createMovie {
+  padding: 0px;
+  text-align: center;
+  margin-bottom: 30px;
+
+label {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+  }
+}
+
+section {
+text-align: center;
+}
+
+article {
+  background: url("images/moviepost2.png");
+  padding-top: 10px;
+  margin: 5px;
+  height: 527px;
+  width: 326px;
+  display: inline-table;
+  color: white;
+  text-align: center;
+}
+article img {
+  align: center;
+  margin: 0;
+  padding: 0;
+  width: 175px;
+  height: 250px;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+}
+
+#deletePost {
+  @extend #submitListing;
+  margin: 5px;
+}
+
+#editPost {
+  @extend #submitListing;
+  margin: 5px;
+}
+
+#updatePost {
+  margin-top: 8%;
+  display: none;
+  input {
+    width: 300px;
+  }
+}
+
+img {
+  max-width: 300px;
+  max-height: 400px;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  margin-left: 25px;
+}
+
+#submitEdit {
+  @extend #submitListing;
+  margin: 5px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.form-control {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  width: 400px;
+  height: 20px;
+  padding: 6px 12px;
+}
+#newsynopsis.form-control {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  width: 400px;
+  height: 20px;
+  padding: 6px 12px;
+}

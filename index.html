@@ -2,47 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Backbone Views</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/template" id="postTmpl">
+  <title>Movie Database</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Italiana' rel='stylesheet' type='text/css'>
+      <script type="text/template" id="postTmpl">
+    <div class="content">
+    <h2><%= title %></h2>
+    <p><%= synopsis %></p>
+    <img src='<%= poster %>' >
+    </div>
 
-      <h2><%= title %></h2>
-      <p><%= content %></p>
-      <blockquote><%= author %></blockquote>
-      <button class="deletePost">Delete</button>
-      <hr>
+    <form id="updatePost" action="">
+      <div class="form-group">
+        <p><label for="editTitle"><p>Movie Title</p></label></p>
+          <p><input type="text" name="editTitle" value="<%= title %>" placeholder="Title"></p>
+      </div>
+      <div class="form-group">
+        <p><label for="editSynopsis">Movie Synopsis</label></p>
+          <p><textarea class="form-control" rows="5" name="editSynopsis" placeholder="Content"><%= synopsis %></textarea></p>
+      </div>
+      <div class="form-group">
+        <p><label for="editPoster">Upload Movie Image</label></p>
+          <p><input type="text" name="editPoster" value="<%= poster %>" placeholder="Image Url"></p>
+      </div>
+      </form>
 
+<div class="btnGroup">
+<button class="btn btn-default" id='deletePost'>Delete</button>
+<button class="btn btn-default" id='editPost'>Edit Post</button>
+<button class="btn btn-default" id='submitEdit'>Submit</button>
+</div>
   </script>
 </head>
 <body>
-<section>
-  <h1>This is where posts go.</h1> <button class="showCreate">Add Post</button>
-  <form action="" id="createPost">
-    <p><input type="text" name="newTitle" placeholder="Title"></p>
-    <p><textarea name="newContent" id="" cols="30" rows="10" placeholder="Post Content"></textarea></p>
-    <p><input type="text" name="newAuthor" placeholder="Author"></p>
-    <p><button type="submit">Create New Post</button></p>
-  </form>
+  <div class="wrapper">
+    <div class="row">
+    <section>
+    <h1>Rachel's Movies</h1>
+    <form id="createMovie">
+      <div class="form-group">
+        <label for="newTitle">Movie Title</label>
+        <input type="text" class="form-control" id="newTitle" name="newTitle" placeholder="Enter the Movie Title">
+      </div>
+      <div class="form-group">
+        <label for="newSynopsis">Movie Synopsis</label>
+        <textarea class="form-control" rows="3" name="newSynopsis" id="newSynopsis" placeholder="Enter Movie Synopsis"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="newPoster">Upload Movie Image</label>
+        <input type="url" id="newPoster" name="newPoster" placeholder="Input Image URL">
+      </div>
+      <button type="submit" class="btn btn-default" id="submitListing">Submit</button>
+    </form>
+
+    </section>
+    </div>
+  </div>
+
+<!-- SCRIPTS -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+<!-- APP FILES -->
+  <script src="scripts/models.js"></script>
+  <script src="scripts/collections.js"></script>
+  <script src="scripts/views.js"></script>
+  <script src="scripts/main.js"></script>
 
 
-</section>
-<aside>
-<div class="box">
-  <h3>This is the sidebar</h3>
-</div>
-</aside>
-
-
-
-
-<script src="bower_components/underscore/underscore.js"></script>
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/backbone/backbone.js"></script>
-
-<!-- app files -->
-<script src="models.js"></script>
-<script src="collections.js"></script>
-<script src="views.js"></script>
-<script src="main.js"></script>
 </body>
 </html>

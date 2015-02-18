@@ -1,4 +1,4 @@
-//Model View for MovieListing
+//MODEL VIEW
 var ListingView = Backbone.View.extend({
   template: _.template($('#postTmpl').html()),
   tagName: 'article',
@@ -49,7 +49,7 @@ var ListingView = Backbone.View.extend({
 });
 
 
-//Collection View for MovieCollection
+//COLLECTION VIEW
 var CollectionView = Backbone.View.extend({
   el: $('section'),
   initialize: function() {

@@ -1,10 +1,10 @@
-//Movie Listing
+//MOVIES LISTINGS
 var MovieListing = Backbone.Model.extend({
   urlRoot:"http://tiy-fee-rest.herokuapp.com/collections/rachflicks2",
   idAttribute: "_id",
   defaults: function() {
     return {
-      poster: 'http://fillmurray.com/300/300'
+      poster: 'http://placecage.com/200/200'
     };
   },
   initialize: function() {

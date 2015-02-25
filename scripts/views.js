@@ -72,7 +72,9 @@ var CollectionView = Backbone.View.extend({
     console.log(this.collection.length);
     this.collection.add(movieListing);
     console.log(this.collection.length);
+    this.$el.find('article').remove();
     this.addAllListings();
+    //this.addOnenewListing(movieListing);
     $('input').val('');
     $('textarea').val('');
 

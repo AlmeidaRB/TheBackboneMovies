@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../bower_components/mocha/mocha.css">
+</head>
+<body>
+
+<div id="mocha"></div>
+
+
+<!-- SCRIPTS -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/underscore/underscore.js"></script>
+  <script src="../bower_components/backbone/backbone.js"></script>
+  <script src="../bower_components/mocha/mocha.js"></script>
+
+<script>
+    mocha.setup('bdd');
+</script>
+
+<script src="../bower_components/chai/chai.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/sinon.js/1.7.3/sinon-min.js"></script>
+<!-- <script src="../bower_components/sinon-chai/lib/sinon-chai.js"></script>
+ -->
+<script>
+    var expect = chai.expect;
+    chai.use(sinon-chai);
+</script>
+
+<!-- APP FILES -->
+<script src="../scripts/models.js"></script>
+<script src="../scripts/collections.js"></script>
+<!-- <script src="../scripts/views.js"></script>
+<script src="../scripts/main.js"></script> -->
+
+<!-- tests to run -->
+<script src="spec/movieModel.spec.js"></script>
+<script src="spec/movieCollection.spec.js"></script>
+
+<script>mocha.run()</script>
+
+</body>
+</html>
